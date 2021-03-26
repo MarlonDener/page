@@ -1,7 +1,8 @@
 *{
 	margin: 0;
 	border:0;
-	box-sizing: border-box;}
+	box-sizing: border-box;
+}
 	
 html,body{
 	height: 100%;
@@ -16,7 +17,7 @@ html,body{
 }
 
 .menu-icon{
-	border:1px solid rgba(255,255,255,0.7);
+	border:1px solid rgba(255,255,255,0.3);
 	box-shadow: 0 1rem 2rem rgba(0,0,0,0.4);
 	background-color: #000;
 	width: 54px;
@@ -239,6 +240,7 @@ header span{
 	justify-content: center;
 	align-items: center;
 	padding: 100px;
+	z-index: 40;
 }
 .logoText{
 	position: absolute;
@@ -442,9 +444,9 @@ box-shadow: 2px 2px 2px 2px rgba(0,0,0,0.9);
 	text-align: center;
 	padding: 40px 28px;
 	max-width: 340px;
-	background: transparent;
 	margin: 15px;
 	box-shadow: 2px 2px 5px 5px rgba(0,0,0,0.4);
+	background: linear-gradient(40deg,rgba(0,0,0,0.8), rgba(0,0,0,1));
 	position: relative;
 	animation-name: kick 0.5s;
 	border:1px solid rgba(255,255,255,0.2);
@@ -464,8 +466,8 @@ box-shadow: 2px 2px 2px 2px rgba(0,0,0,0.9);
 	background: #fff;
 	animation: dep 1s;
 	color: #fff;
-	background: linear-gradient(40deg,rgba(0,0,0,0.8), rgba(0,0,0,1));
-	border:1px solid #fff;
+	background: linear-gradient(#0faed6,#1d7980);
+	position: relative;
 }
 .servicos .content .servicosBox img{
 	filter: invert(1);
@@ -655,7 +657,7 @@ textarea{
 }
 form input[type=submit]{
 	cursor: pointer;
-	background-color: rgba(0,0,0,0.5);
+	background-color: rgba(0,0,0,0.1);
 	color: #fff;
 	width: 200px;
 	margin: 0 auto;
@@ -749,6 +751,7 @@ section.redesSociais{
 }
 .center ul li a:hover{
 	transform: translateY(-20px);
+	background-color: #00bcd4;
 }
 .midias ul{
 	position: absolute;
@@ -791,6 +794,7 @@ section.redesSociais{
 }
 .midias ul li a:hover{
 	transform: translateY(-10px);
+	background-color: #00bcd4;
 }
 .education .box-container{
 	display: flex;
@@ -809,10 +813,11 @@ section.redesSociais{
 	display: inline-block;
 	padding: 8px 20px;
 	width: 380px;
+	z-index: 0;
 
 }
 .lightbar{
-	z-index: 20;
+	z-index: 1;
 	position: absolute;
 	top: 3px;
 	left: 0;
@@ -829,7 +834,7 @@ section.redesSociais{
 
 }
 .box_he h1{
-	font-size: 2rem;
+	font-size: 2.2rem;
 	font-weight: 600px;
 	letter-spacing: 0.1em;
 	text-shadow: 0 0 10px #00b3ff,
@@ -1015,8 +1020,8 @@ left: 90%;
 	cursor:pointer;
 }
 li.slick-active button{
-	background:#132769;
-	color:#132769;
+	background:#00bcd4;
+	color:#00bcd4;
 }
 .slick-slide:focus{
 	outline: none;
@@ -1231,8 +1236,8 @@ li.slick-active button{
 
 .banner .contentBx,
 .sideBar {
-
-width: 60%;
+z-index: 80;
+width: 55%;
 
 }
 .sideBar ul a{
@@ -1311,7 +1316,6 @@ section{min-height: none;
 }
 
 
-
 }
 
 @media(max-width: 580px){
@@ -1337,7 +1341,7 @@ header span{
 	font-size: 1.9rem;
 }
 .box_he h1{
-	font-size: 27px;
+	font-size: 29px;
 }
 .box_he{
 	padding: 0px;
