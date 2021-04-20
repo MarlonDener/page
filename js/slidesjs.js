@@ -13,12 +13,12 @@ $(function(){
 		{
 			breakpoint:900,
 			settings:{
-  			centerMode:true,
-  			slidesToShow: 2,
+  			centerMode:false,
+  			slidesToShow: 1,
 				dots:true,
 				infinite:true,
   				autoplay: true,
-  				autoplaySpeed: 1000,
+  				autoplaySpeed: 1100,
 
 			}
 
@@ -27,11 +27,11 @@ $(function(){
 			breakpoint:650,
 			settings:{
 				arrows:false,
-				centerMode:true,				
+				centerMode:false,				
 				dots:true,
 				slidesToShow:1,				
   				autoplay: true,
-  				autoplaySpeed: 1000,
+  				autoplaySpeed: 1100,
 			}
 
 		},
@@ -41,7 +41,7 @@ $(function(){
 
 				dots:true,
 				arrows:false,
-				centerMode:true,
+				centerMode:false,
 				slidesToShow:1,
   				autoplay: true,
   				autoplaySpeed: 2000,
