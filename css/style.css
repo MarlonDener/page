@@ -34,6 +34,7 @@ html,body{
 	background-size: 60% 50%;
 	background-repeat: no-repeat;
 	cursor: pointer;
+	z-index: 0;
 }
 .menu-icon.active{
 	background-color: #1ca2c7;
@@ -157,6 +158,7 @@ header span{
 }
 .skillsHeader{
 	width: 100%;
+	margin: 0 auto;
 }
 .progress{
 	margin: 1.1rem auto;
@@ -189,23 +191,23 @@ header span{
 	background-color: #fff;
 }
 .progress:nth-child(1) .bar span{
-	width: 95%;
+	width: 100%;
 }
 .progress:nth-child(2) .bar span{
-	width: 90%;
+	width: 100%;
 }
 .progress:nth-child(3) .bar span{
-	width: 70%;
+	width: 50%;
 }
 
 .progress:nth-child(4) .bar span{
-	width: 65%;
+	width: 50%;
 }
 .progress:nth-child(5) .bar span{
-	width: 45%;
+	width: 50%;
 }
 .progress:nth-child(6) .bar span{
-	width: 65%;
+	width: 50%;
 }
 #education .box-container{
 
@@ -213,12 +215,23 @@ header span{
 	justify-content: space-around;
 	flex-wrap: wrap;
 }
-
-
 .banner{
 	position: relative;
 	width: 100%;
 
+}
+
+.imagemCertificado{
+	position: relative;
+	z-index: 120;
+	transition: 0.4s cubic-bezier(0.55, 0.085, 0.68, 0.53);
+}
+.imagemCertificado:hover{
+	transform: scale(1.5);
+	
+}
+.imagemCertificado:hover .box{
+	background: brown;
 }
 .imgSideBar{
 	position: absolute;
@@ -245,7 +258,7 @@ header span{
 	justify-content: center;
 	align-items: center;
 	padding: 100px;
-	z-index: 40;
+	z-index: 250;
 }
 .logoText{
 	position: absolute;
@@ -307,9 +320,8 @@ p{
 	justify-content: cover;
 	align-items: center;
 	height: 100%;
-	transition: 0.5s;
+	transition: 0.2s;
 	padding: 40px;
-	z-index: 10;
 	right: -100%;
 	box-shadow: 2px 2px 20px 2px #181a1f;
 }
@@ -672,6 +684,7 @@ form input[type=submit]{
 	text-transform: uppercase;
 	font-weight: 700;font-size: 17px;
 	transition: 1s;
+	outline: none;
 }
 
 form input[type=submit]:hover{
@@ -684,6 +697,12 @@ footer{
 	color: #fff;
 	background-color:#000;
 	padding: 20px 0;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+.item_footer{
+	text-align: left;
 }
 
 section.redesSociais{
@@ -809,7 +828,8 @@ section.redesSociais{
 	border-bottom: 2px solid #eee;
 	display: inline-block;
 }
-.box_he{
+.box-heading{
+	text-align: center;
 	position: relative;
 	display: inline-block;
 	padding: 8px 20px;
@@ -817,6 +837,7 @@ section.redesSociais{
 	z-index: 0;
 
 }
+
 .lightbar{
 	z-index: 1;
 	position: absolute;
@@ -832,7 +853,7 @@ section.redesSociais{
 	animation: animateText 6s linear infinite alternate-reverse;
 
 }
-.box_he h1{
+.box-heading h1{
 	font-size: 2rem;
 	font-weight: 600px;
 	letter-spacing: 0.1em;
@@ -885,7 +906,13 @@ left: 90%;
 }
 
 }
-
+.fa-id-badge{
+	margin-right: 8px;
+	font-size: 17px;
+}
+.fa-phone{
+	margin-right: 5px;
+}
 
 .education .box-container .box{
 	width: 30rem;
@@ -897,7 +924,12 @@ left: 90%;
 	font-size: 1rem;
 	color: #eee;
 	position: relative;
+	top: 20px;
+	border-bottom:1px solid rgba(189, 189, 189, 0.7);
+	display: block;
+	padding:6px;
 }
+
 .year::before{
 	content: '';
 	position: absolute;
@@ -915,6 +947,7 @@ left: 90%;
 }
 .box-container .box p{
 	font-size: 16px;
+	line-height:23px;
 	color: #eee;
 	padding: 1rem 0;
 }
@@ -935,7 +968,7 @@ left: 90%;
 	box-shadow: 0 1rem 2rem rgba(0,0,0,0.2);
 	border-radius: 1rem;
 	backdrop-filter:blur(0.4rem);
-	z-index: 22000;
+	z-index: 90;
 }
 .theme-toggler span{
 	z-index: 111;
@@ -980,7 +1013,7 @@ left: 90%;
 }
 .img-mosaico-single{
 	width: 100%;
-	padding-top: 70%;
+	padding-top: 63%;
 	margin-top: 10px;
 	margin-bottom: 25px;
 	box-shadow: 0 1rem 2rem rgba(0,0,0,0.5);
@@ -1155,6 +1188,21 @@ li.slick-active button{
 
 
 @media (max-width: 890px){
+	
+.menu-icon{
+	width: 50px;
+	height: 50px;
+}
+
+	.imagemCertificado:hover{
+		transform: scale(1.3);
+		}
+
+	.box-container .box p{
+		font-size: 16px;
+		color: #eee;
+		padding: 1rem 0;
+	}	
 
 	.loader .dot{
 		margin: 0px;
@@ -1193,7 +1241,7 @@ li.slick-active button{
 }
 
 .about .contentHeader p{
-	padding: 5px 8px;
+	padding: 5px 0px;
 }
 .contentHeader{
 	padding:9px 0px;
@@ -1206,7 +1254,7 @@ li.slick-active button{
 	box-shadow: 0 1rem 2rem rgba(0,0,0,0.2);
 	border-radius: 1rem;
 	backdrop-filter:blur(0.4rem);
-	z-index: 22000;
+	z-index: 100;
 }
 .theme-toggler span{
 	z-index: 111;
@@ -1236,6 +1284,7 @@ li.slick-active button{
 .sideBar {
 z-index: 80;
 width: 100%;
+z-index: 250;
 
 }
 .sideBar ul a{
@@ -1316,8 +1365,15 @@ section{min-height: none;
 
 }
 
+
+
 @media(max-width: 580px){
 
+	.box-container .box p{
+		font-size: 14px;
+		color: #eee;
+		padding: 1rem 0;
+	}	
 
 header .btn{
 	font-size: 1rem;
@@ -1338,10 +1394,10 @@ header .name{
 header span{
 	font-size: 1.9rem;
 }
-.box_he h1{
+.box-heading h1{
 	font-size: 25px;
 }
-.box_he{
+.box-heading{
 	padding: 0px;
 	width: 300px;
 }
